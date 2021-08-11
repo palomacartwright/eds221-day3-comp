@@ -92,3 +92,22 @@ switch (
 )
 
 
+# Storing outputs from for loops: 
+
+# seq_along() just creates a list of integers that is the length of the data so that there is values for i to be in the for loop 
+
+
+tigers <- c(29, 34, 82)
+lions <- c(2, 18, 6)
+seq_along(tigers)
+
+big_cats <- vector(mode = "numeric", length = length(tigers))
+
+for(i in seq_along(tigers)){
+  total_cats <- tigers[i] + lions[i]
+  big_cats[i] <- total_cats
+}
+big_cats
+
+
+
